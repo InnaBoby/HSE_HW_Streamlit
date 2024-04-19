@@ -30,8 +30,8 @@ model_type = st.selectbox('Model type',
                           ('CatBoostRegressor', 'CatBoostClassifier'),
                           placeholder="What kind of model would to use...")
 
-if st.button('Run model'):
-    feat_imp, fig = Catboost_feature_importance(X, y, model_type, cat_features, num_features)
+st.button('Run model')
+feat_imp, fig = Catboost_feature_importance(X, y, model_type, cat_features, num_features)
 
 n = st.select_slider('Show top-() features',
                          options=np.arange(len(X.columns.to_list()))
