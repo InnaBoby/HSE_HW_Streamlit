@@ -6,7 +6,7 @@ st.header('Feature Importance')
 
 data = pd.read_csv('climate_change_indicators.csv')
 if st.button('Показать данные'):
-    st.table(data)
+    st.table(data.head())
 
 #Choose target, numerical features, categorical features and columns to drop
 to_drop = st.multiselect(
