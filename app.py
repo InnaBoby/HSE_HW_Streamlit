@@ -23,7 +23,7 @@ cat_features = st.multiselect(
     'Categorial features', data.columns.to_list())
 X = data[cat_features + num_features]
 
-st.wright(X.shape)
+st.write(X.shape)
 
 model_type = st.selectbox('Model type',
                           ('CatBoostRegressor', 'CatBoostClassifier'),
