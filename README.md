@@ -1,15 +1,15 @@
 # HSE_HW_Streamlit
 HomeWork 09, Streamlit
 
-#Data:#
+# Data:
 
 https://www.kaggle.com/datasets/susanta21/student-attitude-and-behavior
 
-#APP on Streamlit:#
+# APP on Streamlit:
 
 https://hsehwapp-qmq9my7ylxqxswmkyzzrbn.streamlit.app/
 
-#P.S.:#
+# P.S.:
 1) to drop  - удаляет ненужные колонки из датасета
 2) target - feature-importance какого признака хотим получить
 3) Numerical features - числовые признаки, которые будут участвовать в анализе
