@@ -10,7 +10,7 @@ import seaborn as sns
 
 def Catboost_feature_importance(X, y, model_type, cat_features, num_features):
         
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.8, random_state=42)
+    #X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.8, random_state=42)
     
     
     if model_type == 'CatBoostRegressor':
@@ -25,7 +25,7 @@ def Catboost_feature_importance(X, y, model_type, cat_features, num_features):
                               depth=5,
                               cat_features=cat_features)
 
-    model.fit(X_train, y_train)
+    model.fit(X, y)
 
     #Table
     importance = model.feature_importances_
