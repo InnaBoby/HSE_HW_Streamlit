@@ -23,19 +23,22 @@ cat_features = st.multiselect(
     'Categorial features', data.columns.to_list())
 X = data[cat_features + num_features]
 
+st.table(X.head())
+
 model_type = st.selectbox('Model type',
                           ('CatBoostRegressor', 'CatBoostClassifier'),
                           placeholder="What kind of model would to use...")
 
-feat_imp, fig = Catboost_feature_importance(X, y, model_type, cat_features, num_features)
+if st.button('Run model'):
+    feat_imp, fig = Catboost_feature_importance(X, y, model_type, cat_features, num_features)
 
-n = st.select_slider('Show top-() features',
-    options=[range(len(cat_features+num_features))])
-st.table(feat_imp.head(n))
-
-plot = st.checkbox('Show plot')
-if plot:
-    st.write(fig)
+    n = st.select_slider('Show top-() features',
+        options=[range(len(cat_features+num_features))])
+    st.table(feat_imp.head(n))
+    
+    plot = st.checkbox('Show plot')
+    if plot:
+        st.write(fig)
 
 
 
