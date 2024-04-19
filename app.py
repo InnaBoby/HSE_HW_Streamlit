@@ -4,7 +4,7 @@ from feat_imp import *
 
 st.header('Feature Importance')
 
-data = pd.read_csv('School_Attendance_by_Student_Group.csv')
+data = pd.read_csv('climate_change_indicators.csv')
 if st.button('Показать данные'):
     st.table(data)
 
