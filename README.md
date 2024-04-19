@@ -3,6 +3,8 @@ HomeWork 09, Streamlit
 
 # Data:
 
+Данные о студентах, такие как пол, рост, вес, оценки в колледже, зарплатные ожидания, хобби, время, уделяемое медиа, финансовый статус и т.п.
+ссылка на kaggle:
 https://www.kaggle.com/datasets/susanta21/student-attitude-and-behavior
 
 # APP on Streamlit:
