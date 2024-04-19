@@ -4,7 +4,7 @@ from feat_imp import *
 
 st.header('Feature Importance')
 
-data = pd.read_csv('higher_ed_employee_salaries.csv')
+data = pd.read_csv('Student Attitude and Behavior.csv')
 if st.button('Показать данные'):
     st.table(data.head())
 data.fillna(0)
