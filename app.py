@@ -34,7 +34,7 @@ if st.button('Run model'):
     feat_imp, fig = Catboost_feature_importance(X, y, model_type, cat_features, num_features)
 
     n = st.select_slider('Show top-() features',
-        options=[range(len(cat_features+num_features))])
+        options=np.arange(len(X.columns.to_list()))
     st.table(feat_imp.head(n))
     
     plot = st.checkbox('Show plot')
