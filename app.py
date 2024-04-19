@@ -8,7 +8,7 @@ data = pd.read_csv('Student Attitude and Behavior.csv')
 if st.button('Показать данные'):
     st.table(data.head())
 data.fillna(0)
-data=data[['Gender',	'Height(CM)',	'Weight(KG)',	'10th Mark',	'12th Mark',	'college mark',	'hobbies',	'prefer to study in',	'salary expectation', 'Financial Status']]
+data=data[['Gender',	'Height(CM)',	'Weight(KG)',	'10th Mark',	'12th Mark',	'college mark',	'hobbies',	'prefer to study in',	'salary expectation']]
 
 #Choose target, numerical features, categorical features and columns to drop
 to_drop = st.multiselect(
