@@ -17,6 +17,7 @@ data.drop(columns=to_drop, inplace = True)
 target = st.multiselect(
     'Target', data.columns.to_list())
 y = data[target]
+data.drop(columns=target, inplace=True)
 
 num_features = st.multiselect(
     'Numerical features', data.select_dtypes(exclude='object').columns.to_list())
