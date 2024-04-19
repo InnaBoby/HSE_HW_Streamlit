@@ -19,9 +19,9 @@ target = st.multiselect(
 y = data[target]
 
 num_features = st.multiselect(
-    'Numerical features', data.columns.to_list())
+    'Numerical features', data.select_dtypes(exclude='object').columns.to_list())
 cat_features = st.multiselect(
-    'Categorial features', data.columns.to_list())
+    'Categorial features', data.select_dtypes(include='object').columns.to_list())
 X = data[cat_features + num_features]
 
 st.table(X.head())
