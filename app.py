@@ -4,17 +4,7 @@ from feat_imp import *
 
 st.header('Feature Importance')
 
-uploaded_file = st.file_uploader('Загрузите данные')
-if uploaded_file is not None:
-    bytes_data = uploaded_file.getvalue()
-        # To convert to a string based IO:
-    stringio = StringIO(uploaded_file.getvalue().decode('utf-8'))
-        # To read file as string:
-    string_data = stringio.read()
-        # Can be used wherever a "file-like" object is accepted:
-    data = pd.read_csv(uploaded_file)
-
-
+data = pd.read_csv('School_Attendance_by_Student_Group.csv')
 if st.button('Показать данные'):
     st.table(data)
 
