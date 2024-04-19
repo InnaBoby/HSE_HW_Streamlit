@@ -12,20 +12,15 @@ def Catboost_feature_importance(X, y, model_type, cat_features, num_features):
         
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.8, random_state=42)
     
-    scaler = StandardScaler()
-    X_train[num_features]=scaler.fit_transform(X_train[num_features])
-    X_test[num_features]=scaler.transform(X_test[num_features])
-    print(X_train)
+    
     if model_type == 'CatBoostRegressor':
-      y_train=scaler.fit_transform(y_train)
-      y_test=scaler.transform(y_test)
-      model = CatBoostRegressor(iterations=500,
+            model = CatBoostRegressor(iterations=500,
                               learning_rate=0.01,
                               depth=5,
                               cat_features=cat_features)
     
     elif model_type == 'CatBoostClassifier':
-      model = CatBoostClassifier(iterations=500,
+            model = CatBoostClassifier(iterations=500,
                               learning_rate=0.01,
                               depth=5,
                               cat_features=cat_features)
