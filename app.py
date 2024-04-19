@@ -34,7 +34,7 @@ model_type = st.selectbox('Model type',
 feat_imp, fig = Catboost_feature_importance(X, y, model_type, cat_features, num_features)
 
 n = st.select_slider('Show top-() features',
-                         options=np.arange(len(X.columns.to_list()))
+                         options=np.arange(1, len(X.columns.to_list())+1)
                         )
 st.table(feat_imp.head(n))
     
